@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="zoneApplication" prefHeight="500.0" prefWidth="800.0" styleClass="fondZoneTravail" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tp1_conception.HelloController">
+   <children>
+      <AnchorPane fx:id="zoneMenu" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <MenuBar fx:id="menuApp" layoutX="8.0" layoutY="8.0" prefHeight="26.0" prefWidth="254.0" styleClass="tranparent">
+              <menus>
+                <Menu text="_Fichier">
+                  <items>
+                    <MenuItem fx:id="deconnexionMenu" text="_Deconnexion" />
+                        <MenuItem fx:id="fermerMenu" text="_Fermer" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <CheckMenuItem fx:id="modeSombreMenu" text="_Mode sombre" />
+                  </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                </Menu>
+                <Menu text="_Clients">
+                  <items>
+                    <MenuItem fx:id="ajouterClientMenu" text="_Ajouter" />
+                        <MenuItem fx:id="afficherClientMenu" text="Afficher" />
+                  </items>
+                </Menu>
+                  <Menu text="_Documents">
+                     <items>
+                        <MenuItem fx:id="ajouterDocMenu" text="_Ajouter" />
+                        <MenuItem fx:id="rechercherDocMenu" text="_Rechercher" />
+                        <MenuItem fx:id="preterDocMenu" text="_Prêter" />
+                     </items>
+                  </Menu>
+                <Menu text="_Help">
+                  <items>
+                    <MenuItem text="A _propos" />
+                        <MenuItem text="_Raccourcis" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="zoneOutils" prefHeight="45.0" prefWidth="200.0" styleClass="fondOutils" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <AnchorPane prefHeight="46.0" prefWidth="110.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" layoutY="-36.0" prefHeight="46.0" prefWidth="100.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox fx:id="zonePrecedent" prefHeight="40.0" prefWidth="38.0" styleClass="itemToolBar">
+                           <children>
+                              <ImageView fx:id="boutonPrecedent" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons8-annuler-96.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="zoneSuivant" prefHeight="40.0" prefWidth="38.0" styleClass="itemToolBar">
+                           <children>
+                              <ImageView fx:id="boutonSuivant" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons8-refaire-96.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="268.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="268.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="utilisateurLabel" layoutX="14.0" layoutY="15.0" text="Utilisateur XYZ">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="642.0" prefHeight="46.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="4.0" layoutY="-27.0" prefHeight="46.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox fx:id="zoneDeconnexion" alignment="CENTER" prefHeight="46.0" prefWidth="139.0" styleClass="itemToolBar">
+                           <children>
+                              <ImageView fx:id="boutonDeconnexion" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons8-sortie-96.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label fx:id="labelDeconnexion" prefHeight="20.0" prefWidth="94.0" style="-fx-underline: true;" styleClass="textDanger" text="Deconnexion" textAlignment="CENTER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="zoneBoutonNavigation1" layoutY="131.4" prefHeight="410.0" prefWidth="45.0" styleClass="fondZoneTravail" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="131.4">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="370.0" prefWidth="46.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-accueil-64.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-ajouter-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-emprunter-un-livre-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-voir-le-fichier-64.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-client-management-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8-afficher-64.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="zoneMenu" layoutY="86.0" prefHeight="40.0" prefWidth="45.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <ImageView fx:id="menu" fitHeight="40.0" fitWidth="46.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-menu-48 (1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="zoneBoutonNavigation2" layoutX="46.0" layoutY="131.2" prefHeight="370.0" prefWidth="148.0" styleClass="fondOutils" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="131.0">
+         <children>
+            <VBox prefHeight="370.0" prefWidth="148.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="accueilButton" defaultButton="true" prefHeight="45.0" prefWidth="170.0" text="_Accueil" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ajouterDocButton" defaultButton="true" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="170.0" text="A_jouter un document" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="preterDocButton" defaultButton="true" layoutX="10.0" layoutY="60.0" prefHeight="45.0" prefWidth="170.0" text="_Prêter un document" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="rechercherDocButon" defaultButton="true" layoutX="10.0" layoutY="111.0" prefHeight="45.0" prefWidth="170.0" text="_Rechercher un document" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ajouterClientButton" defaultButton="true" layoutX="10.0" layoutY="161.0" prefHeight="45.0" prefWidth="170.0" text="Ajouter un _client" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="afficherClientbutton" defaultButton="true" layoutX="10.0" layoutY="212.0" prefHeight="45.0" prefWidth="170.0" text="Afficher un clien_t" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="zoneAriane" layoutX="192.0" layoutY="87.2" prefHeight="46.0" prefWidth="600.0" styleClass="blanc" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="87.0">
+         <children>
+            <HBox fx:id="zoneZoom" alignment="CENTER_RIGHT" layoutX="-22.0" layoutY="-23.0" prefHeight="46.0" prefWidth="633.0" spacing="20.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="labelZoom" text="Zoom" />
+                  <Slider fx:id="zoomSlider" blockIncrement="1.0" max="200.0" prefHeight="38.0" prefWidth="226.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </children></AnchorPane>
+      <AnchorPane fx:id="zoneTravail" layoutX="200.0" layoutY="131.2" prefHeight="370.0" prefWidth="633.0" styleClass="fondZoneTravail" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="131.0">
+         <children>
+            <BorderPane fx:id="borderPaneHome" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></AnchorPane>
+   </children>
+</AnchorPane>

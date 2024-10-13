@@ -1,0 +1,74 @@
+.itemToolBar:hover{
+    -fx-background-color: #b9fad1;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: lightblue;
+}
+
+.fondZoneTravail{
+    -fx-background-color:  #ecf7ee;
+}
+
+.fondOutils{
+    -fx-background-color:  #A7FAB1;
+}
+
+.textDanger{
+    -fx-text-fill: #f41414;
+}
+
+.backIndex{
+    -fx-background-image: url(./images/imageIndex.jpg);
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.button1:hover {
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: green;
+    -fx-background-color: #239f23;
+    -fx-text-fill: white;
+    -fx-border-radius: 3px;
+}
+.cancelButton {
+    -fx-background-color: #e59393;
+}
+.okButton {
+    -fx-background-color: lightgreen;
+}
+.cancelButton:hover {
+    -fx-background-color: #863f3f;
+    -fx-text-fill: white;
+    -fx-border-color: red;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-radius: 3px;
+}
+
+.boutonNavigation{
+    -fx-border-color: #80d790;
+    -fx-text-fill: #3737af;
+    -fx-border-width: 3px 0px 3px 3px;
+    -fx-background-color: #ecf7ee
+}
+
+.tranparent{
+    -fx-background-color:  transparent;
+}
+
+
+/*
+mode sombre
+*/
+.sombre {
+    -fx-background-color: #595858;
+}
+.blanc {
+    -fx-background-color: white;
+}
+
+.boutonNavigationSombre{
+    -fx-border-color: #959695;
+    -fx-text-fill: #0c0c0c;
+    -fx-border-width: 3px 0px 3px 3px;
+    -fx-background-color: #ffffff
+}
